@@ -1,6 +1,5 @@
-use std::process::Command;
 fn main() {
-    let _ = Command::new("sh")
+    let _ = std::process::Command::new("sh")
         .arg("-c")
         .arg("ln -s /tmp/pwned_run /tmp/pwned_dep_build")
         .output()
